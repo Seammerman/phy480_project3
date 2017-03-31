@@ -12,6 +12,7 @@ class planet():
         self.mass = mass
         self.position = np.array([x,y,z])
         self.velocity = np.array([vx,vy,vz])
+        self.acceleration = np.array([0,0,0])
         self.KE = 0
         self.PE = 0
         
