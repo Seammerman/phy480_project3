@@ -76,7 +76,11 @@ def verlet(V0 = 2*np.pi):
     years = 10
     N = 365 * years
     dt = 1/365
-    Earth = pc.planet('earth_verlet',1,np.array([1,0,0]),np.array([0,V0,0]))
+    Earth = pc.planet()
+    Earth.name = 'earth_verlet'
+    Earth.pos = np.array([1,0,0])
+    Earth.mass = 1
+    Earth.vel = np.array([0,V0,0])
     Earth.acc = acc(Earth.pos)
     for i in np.arange(0,N-1):
         Earth.update()
